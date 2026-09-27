@@ -1,0 +1,89 @@
+% =====================================================================
+%  florula.sty -- house style for Florula Aramiensis
+%  Compiler: pdfLaTeX.  Encoding: UTF-8.  Line endings: LF.
+% =====================================================================
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{florula}[2026/09/26 v1.0 Florula Aramiensis house style]
+
+% ---------------------------------------------------------------------
+% 1. Core packages
+% ---------------------------------------------------------------------
+\RequirePackage[T1]{fontenc}
+\RequirePackage[utf8]{inputenc}
+\RequirePackage{lmodern}
+\RequirePackage{microtype}
+\RequirePackage[a4paper,margin=25mm,headheight=14pt]{geometry}
+\RequirePackage{graphicx}
+\RequirePackage[dvipsnames]{xcolor}
+\RequirePackage{booktabs}
+\RequirePackage{array}
+\RequirePackage{tabularx}
+\RequirePackage{longtable}
+\RequirePackage{caption}
+\RequirePackage{enumitem}
+\RequirePackage{fancyhdr}
+\RequirePackage[round,authoryear]{natbib}
+\RequirePackage[hidelinks]{hyperref}
+
+% ---------------------------------------------------------------------
+% 2. Path macros -- every figure goes through these, never a raw path
+% ---------------------------------------------------------------------
+\newcommand{\florulaFigures}{figures}
+\newcommand{\florulaMaps}{\florulaFigures/maps}
+\newcommand{\florulaPlates}{\florulaFigures/plates}
+
+% ---------------------------------------------------------------------
+% 3. Names and nomenclature
+% ---------------------------------------------------------------------
+% \taxon{Genus species}          -> italic scientific name
+% \authority{(L.) Benth.}        -> upright author citation
+% \sciname{Genus species}{Auth.} -> italic name + upright authority
+\newcommand{\taxon}[1]{\textit{#1}}
+\newcommand{\authority}[1]{\textup{#1}}
+\newcommand{\sciname}[2]{\taxon{#1}~\authority{#2}}
+
+% ---------------------------------------------------------------------
+% 4. Treatments: family chapters and species sections
+% ---------------------------------------------------------------------
+% \family{Fabaceae}{Pea family}
+\newcommand{\family}[2]{%
+	\chapter[#1]{#1\\[0.3ex]{\large\normalfont\itshape #2}}%
+	\markboth{\MakeUppercase{#1}}{}}
+% \species{Genus species}{Authority}
+\newcommand{\species}[2]{%
+	\section[\taxon{#1}]{\sciname{#1}{#2}}%
+	\markright{\taxon{#1}}}
+% Labelled paragraphs inside a species treatment
+\newcommand{\field}[1]{\par\noindent\textbf{#1.}~}
+
+% ---------------------------------------------------------------------
+% 5. Dichotomous keys
+% ---------------------------------------------------------------------
+% \begin{florakey}
+	%   \lead{1a}{Leaves compound}{2}
+	%   \lead{1b}{Leaves simple}{\taxon{Milicia}}
+	% \end{florakey}
+\newenvironment{florakey}%
+{\par\medskip\begingroup\small\setlength{\parskip}{2pt}}%
+{\par\endgroup\medskip}
+\newcommand{\lead}[3]{%
+	\par\noindent\hangindent=3em\hangafter=1%
+	\makebox[3em][l]{\textbf{#1}}#2\dotfill\,#3}
+
+% ---------------------------------------------------------------------
+% 6. Specimen citations
+% ---------------------------------------------------------------------
+% \specimen{Collector}{Number}{HERBARIUM}
+\newcommand{\specimen}[3]{#1~#2~(\textsc{\MakeLowercase{#3}})}
+
+% ---------------------------------------------------------------------
+% 7. Running heads
+% ---------------------------------------------------------------------
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LE]{\small\leftmark}
+\fancyhead[RO]{\small\rightmark}
+\fancyfoot[C]{\small\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+
+\endinput
