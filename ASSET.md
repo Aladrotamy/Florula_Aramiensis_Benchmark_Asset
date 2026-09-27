@@ -52,3 +52,6 @@ Variation is demonstrated, not claimed. `variants/variant_B/` is a second comple
 
 ## Task generation
 `TASK_CATALOGUE.md` lists 30 single-step tasks with their verifier checks and examples of composed tasks.
+
+## How this asset was produced
+The asset was designed, assembled, compiled and verified by Rotimi Alade in TeXstudio and Git Bash, with every milestone reviewed before it was committed. Claude (Anthropic) assisted with drafting text, writing the data generator and verifier scripts, and preparing the documentation. All specimen data are synthetic and were produced by the seeded generator in `tools/`.
