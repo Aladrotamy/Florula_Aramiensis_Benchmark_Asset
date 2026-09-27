@@ -10,3 +10,5 @@
 *.fls
 *.fdb_latexmk
 *_draft.txt
+regen/
+__pycache__/

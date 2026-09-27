@@ -1,0 +1,17 @@
+stage        case                                                             score  ok
+null         project_source (4 planted defects)                              0.6154  yes
+solver       golden_solution                                                 1.0000  yes
+monotone     prefix 1: fixed families/meliaceae.tex                          0.6923  yes
+monotone     prefix 2: fixed data/specimens.tsv                              0.8462  yes
+monotone     prefix 3: fixed appendices/phenology_calendar.tex               0.8974  yes
+monotone     prefix 4: fixed keys/key_to_families.tex                        1.0000  yes
+adversarial  drop_last: D1-D3 fixed, key left broken                         0.9231  yes
+adversarial  close_log_only: review log closed, no defect fixed              0.6410  yes
+adversarial  delete_columns: calendar made to fit by dropping Sep-Dec        0.9231  yes
+adversarial  delete_record: S047 removed instead of corrected                0.6154  yes
+adversarial  use_decoy: archived export copied over specimens.tsv            0.6154  yes
+adversarial  old_house_style: author abbreviations spaced as in the 2019 note  0.0000  yes
+adversarial  paste_after_end: text parked after \end{document}               0.0000  yes
+alternative  resizebox: overflowing calendar fixed by scaling to the text block  1.0000  yes
+
+ORACLE PASSED

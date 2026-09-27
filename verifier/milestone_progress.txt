@@ -1,0 +1,5 @@
+raw 0.1538   gate 1   SCORE 0.1538   (milestone_1_foundation)
+raw 0.2051   gate 1   SCORE 0.2051   (milestone_2_references)
+raw 0.6410   gate 1   SCORE 0.6410   (milestone_3_data_methods)
+raw 0.7949   gate 1   SCORE 0.7949   (milestone_4_treatments)
+raw 1.0000   gate 1   SCORE 1.0000   (golden_solution)

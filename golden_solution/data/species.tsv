@@ -1,0 +1,19 @@
+species_id	family	genus	epithet	authority	status	vegetation	local_names	trade_name
+ANA01	Anacardiaceae	Anacardium	occidentale	L.	cultivated	FSM;GSW	Yoruba: Kaju	Cashew
+ANA02	Anacardiaceae	Spondias	mombin	L.	native	LSF;FSM	Yoruba: Iyeye	Hog plum
+COM01	Combretaceae	Terminalia	ivorensis	A.Chev.	native	LSF	Yoruba: Idigbo	Idigbo
+COM02	Combretaceae	Terminalia	superba	Engl. & Diels	native	LSF;FSM	Yoruba: Afara	Afara
+FAB01	Fabaceae	Afzelia	africana	Sm. ex Pers.	native	FSM;GSW	Yoruba: Apa; Hausa: Kawo	Doussie
+FAB02	Fabaceae	Parkia	biglobosa	(Jacq.) R.Br. ex G.Don	native	FSM;GSW	Yoruba: Igba; Hausa: Dorowa	African locust bean
+FAB03	Fabaceae	Pterocarpus	erinaceus	Poir.	native	GSW	Hausa: Madobiya	African rosewood
+IRV01	Irvingiaceae	Irvingia	gabonensis	(Aubry-Lecomte ex O'Rorke) Baill.	native	LSF	Yoruba: Oro; Igbo: Ogbono	Bush mango
+MAL01	Malvaceae	Adansonia	digitata	L.	native	GSW	Yoruba: Ose; Hausa: Kuka	Baobab
+MAL02	Malvaceae	Ceiba	pentandra	(L.) Gaertn.	native	LSF;FSM	Yoruba: Araba; Hausa: Rimi	Ceiba
+MAL03	Malvaceae	Cola	nitida	(Vent.) Schott & Endl.	cultivated	LSF;FSM	Yoruba: Obi; Hausa: Goro	Kola
+MEL01	Meliaceae	Entandrophragma	cylindricum	(Sprague) Sprague	native	LSF	-	Sapele
+MEL02	Meliaceae	Khaya	grandifoliola	C.DC.	native	LSF;FSM	Yoruba: Oganwo	African mahogany
+MEL03	Meliaceae	Khaya	senegalensis	(Desr.) A.Juss.	native	GSW	Hausa: Madachi	Dry-zone mahogany
+MOR01	Moraceae	Antiaris	toxicaria	Lesch.	native	LSF	-	Ako
+MOR02	Moraceae	Milicia	excelsa	(Welw.) C.C.Berg	native	LSF;FSM	Yoruba: Iroko	Iroko
+SAP01	Sapotaceae	Chrysophyllum	albidum	G.Don	native	LSF;FSM	Yoruba: Agbalumo; Igbo: Udara	African star apple
+SAP02	Sapotaceae	Vitellaria	paradoxa	C.F.Gaertn.	native	GSW	Yoruba: Emi; Hausa: Kadanya	Shea
