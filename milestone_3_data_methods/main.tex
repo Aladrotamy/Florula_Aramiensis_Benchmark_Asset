@@ -1,0 +1,35 @@
+   % Florula Aramiensis, master file (pdfLaTeX)
+   
+\documentclass[11pt,twoside,openright]{book}
+\usepackage{florula}
+
+\hypersetup{
+	pdftitle={Florula Aramiensis},
+	pdfauthor={Rotimi Alade}
+}
+
+\begin{document}
+	
+	% ------------------------------ Front matter ------------------------------
+	\frontmatter
+	\input{frontmatter/titlepage}
+	\input{frontmatter/imprint}
+	\input{frontmatter/preface}
+	\tableofcontents
+	\input{frontmatter/how_to_use}
+	
+	% ------------------------------ Main matter -------------------------------
+	\mainmatter
+    \input{chapters/introduction}
+    \input{chapters/methods}
+    \input{keys/key_to_families}  
+    \appendix
+    \input{appendices/author_abbreviations}
+    \input{appendices/gazetteer}
+	
+	% ------------------------------ Back matter -------------------------------
+	\backmatter
+    \bibliographystyle{plainnat}
+	\bibliography{bib/florula}
+	
+\end{document}
