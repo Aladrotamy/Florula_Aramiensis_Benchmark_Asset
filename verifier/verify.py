@@ -4,6 +4,7 @@ Usage (from the asset root):
     python verifier/verify.py golden_solution            # compile and score
     python verifier/verify.py project_source --no-compile
     python verifier/verify.py milestone_3_data_methods --no-gate
+    python verifier/verify.py variants/variant_B --expected variants/variant_B/expected.json
 
 Score = gate x (passed weight / total weight), in [0, 1].
 The gate is 0 if any invariant (frozen files, decoys, anti-shortcut rules)
@@ -427,8 +428,10 @@ def main():
     ap.add_argument("--no-compile", action="store_true", help="read main.log instead of compiling")
     ap.add_argument("--no-gate", action="store_true", help="report the ungated score (milestone progress)")
     ap.add_argument("--json", action="store_true")
+    ap.add_argument("--expected", default=os.path.join(HERE, "expected.json"),
+                    help="expected values (default: verifier/expected.json)")
     a = ap.parse_args()
-    exp = json.load(open(os.path.join(HERE, "expected.json"), encoding="utf-8"))
+    exp = json.load(open(a.expected, encoding="utf-8"))
     C = run_checks(a.project, exp, not a.no_compile)
     scored = [r for r in C.results if r[1] > 0]
     total = sum(r[1] for r in scored)

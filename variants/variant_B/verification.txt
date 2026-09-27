@@ -1,0 +1,2 @@
+raw 1.0000   gate 1   SCORE 1.0000   (variants/variant_B)
+raw 0.7692   gate 0   SCORE 0.0000   (variants/variant_B)

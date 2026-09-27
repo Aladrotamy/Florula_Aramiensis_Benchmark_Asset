@@ -1,0 +1,81 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage[margin=25mm]{geometry}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{enumitem}
+\setlist{nosep,leftmargin=1.5em}
+\usepackage[hidelinks]{hyperref}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{4pt}
+
+\begin{document}
+\sloppy
+
+{\Large\bfseries Benchmark Requirements}\par
+\medskip
+\textbf{Domain:} Overleaf / LaTeX (scholarly publishing)\\
+\textbf{Asset:} Florula Aramiensis Benchmark Asset\\
+\textbf{Task:} Resolve the four open curator's remarks in a 44-page
+multi-file LaTeX flora so that it is correct and compiles cleanly.
+
+\section*{Required project content}
+\begin{itemize}
+\item A \texttt{book}-class LaTeX project with a house style
+  (\texttt{florula.sty}), front matter, three introductory chapters,
+  eight family chapters, three appendices and a BibTeX bibliography.
+\item Four tab-separated data files (18 species, 12 localities,
+  90 specimens, monthly phenology) that are the single source of every
+  count, date, locality and map in the book.
+\item Eighteen species treatments, each citing its specimens and
+  showing a distribution map drawn from the data.
+\item A Key to Families and seven keys to species.
+\item A review log, a register of open questions and two build files.
+\end{itemize}
+
+\section*{LaTeX requirements}
+\begin{itemize}
+\item Compile with pdfLaTeX and BibTeX (natbib, plainnat).
+\item Keep the project editable as UTF-8 LaTeX source in its existing
+  folder structure, with every chapter file connected through
+  \texttt{main.tex}.
+\item Use the existing references; every one of the 15 references must
+  be cited.
+\end{itemize}
+
+\section*{Acceptance thresholds}
+\begin{tabularx}{\linewidth}{@{}Xl@{}}
+\toprule
+Criterion & Threshold \\
+\midrule
+LaTeX errors / undefined references / overfull boxes & 0 / 0 / 0 \\
+Compiled page count & 44 ($\pm$0) \\
+Specimens violating the six data rules & 0 of 90 \\
+Specimens cited exactly once in their own treatment & 90 of 90 \\
+Distribution maps and phenology statements agreeing with the data & 18 of 18 each \\
+Phenological calendar cells agreeing with the data & 216 of 216 \\
+Key to Families & couplets 1--9, all 8 families reachable \\
+Author abbreviations used but not listed in Appendix A & 0 \\
+Review-log entries closed with a resolution & 12 of 12 \\
+Frozen files changed (including both decoys) & 0 of 26 \\
+Verifier score of the final state & 1.0000 \\
+\bottomrule
+\end{tabularx}
+
+\section*{Expected final state}
+\begin{itemize}
+\item The state in \texttt{golden\_solution/}: all four planted defects
+  corrected, the review log closed, and the compiled 44-page PDF.
+\item The decoys \texttt{data/archive/specimens\_export\_2023.tsv} and
+  \texttt{notes/house\_style\_2019.md} present, unchanged and unused.
+\item The five-milestone history preserved in the milestone folders and
+  in one git commit per milestone.
+\end{itemize}
+
+\textbf{Important:} the region, localities, collectors, herbaria and
+specimen records are synthetic and demonstrative. They must not be
+presented as evidence from real collections.
+
+\end{document}

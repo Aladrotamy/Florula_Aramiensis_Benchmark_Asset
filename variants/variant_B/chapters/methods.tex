@@ -1,0 +1,86 @@
+\chapter{Materials and Methods}
+
+\section{Data files}
+The Flora rests on four tab-separated data files in the \texttt{data}
+folder of this project. They are the single source for every count,
+date and locality printed in this volume.
+
+\begin{description}[style=nextline,leftmargin=2em]
+	\item[\texttt{data/species.tsv}] The checklist: one row for each of
+	the 18 species, with its family, author citation, status (native or
+	cultivated), the vegetation types in which it occurs, and its local
+	and trade names.
+	\item[\texttt{data/localities.tsv}] The 12 collecting localities, with
+	grid square, altitude and vegetation type. It matches the Gazetteer
+	in Appendix~\ref{app:gazetteer} row for row.
+	\item[\texttt{data/specimens.tsv}] The 126 specimens on which the
+	treatments rest, with collector, collector's number, date, locality,
+	altitude, herbarium and phenological state.
+	\item[\texttt{data/phenology.tsv}] For each species and month, whether
+	the species is recorded in flower (fl), in fruit (fr), both, or
+	neither.
+\end{description}
+
+\section{Validation of the specimen records}
+Every specimen record was checked against six rules before it was
+accepted.
+\begin{enumerate}[label=\arabic*.]
+	\item The altitude equals the altitude of the locality in
+	\texttt{localities.tsv}.
+	\item According to \texttt{species.tsv}, the species occurs in the
+	vegetation type of the locality.
+	\item The date falls within the collector's working period: Harding
+	1934--1938, Olaniyan 1961--1967, Alade 2019--2025.
+	\item The herbarium is the one that holds that collector's material:
+	Harding in \textsc{okf}, Olaniyan in \textsc{svn}, Alade in
+	\textsc{auh}.
+	\item A specimen in flower or fruit was collected in a month in which
+	\texttt{phenology.tsv} records that state; a sterile specimen was
+	collected in a month with neither.
+	\item Each collector's numbers increase with date and are never
+	repeated.
+\end{enumerate}
+
+\section{Summary of the specimen data}
+Table~\ref{tab:family-summary} gives the number of species and
+specimens in each family, and Table~\ref{tab:collector-summary} gives
+the number of specimens from each collector.
+
+\begin{table}[htbp]
+	\centering
+	\caption{Species and specimens by family.}
+	\label{tab:family-summary}
+	\begin{tabular}{@{}lrr@{}}
+		\toprule
+		Family & Species & Specimens \\
+		\midrule
+		Anacardiaceae & 2 & 14 \\
+		Combretaceae  & 2 & 14 \\
+		Fabaceae      & 3 & 21 \\
+		Irvingiaceae  & 1 &   7 \\
+		Malvaceae     & 3 & 21 \\
+		Meliaceae     & 3 & 21 \\
+		Moraceae      & 2 & 14 \\
+		Sapotaceae    & 2 & 14 \\
+		\midrule
+		Total         & 18 & 126 \\
+		\bottomrule
+	\end{tabular}
+\end{table}
+
+\begin{table}[htbp]
+	\centering
+	\caption{Specimens by collector and phenological state.}
+	\label{tab:collector-summary}
+	\begin{tabular}{@{}llrrrr@{}}
+		\toprule
+		Collector & Herbarium & Flowering & Fruiting & Sterile & Total \\
+		\midrule
+		Harding   & \textsc{okf} &  7 & 30 &  9 & 46 \\
+		Olaniyan  & \textsc{svn} &  6 & 24 &  6 & 36 \\
+		Alade     & \textsc{auh} & 10 & 22 & 12 & 44 \\
+		\midrule
+		Total     &              & 23 & 76 & 27 & 126 \\
+		\bottomrule
+	\end{tabular}
+\end{table}

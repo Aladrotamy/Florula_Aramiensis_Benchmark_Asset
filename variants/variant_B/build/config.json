@@ -1,0 +1,24 @@
+{
+  "project": "Florula Aramiensis",
+  "volume": 1,
+  "subtitle": "Economic Trees",
+  "editor": "Rotimi Alade",
+  "year": 2026,
+  "main_file": "main.tex",
+  "compiler": "pdflatex",
+  "bibliography_tool": "bibtex",
+  "pages": 44,
+  "counts": {
+    "families": 8,
+    "species": 18,
+    "specimens": 126,
+    "localities": 12,
+    "references": 15,
+    "author_abbreviations": 25
+  },
+  "herbaria": [
+    "AUH",
+    "OKF",
+    "SVN"
+  ]
+}

@@ -1,0 +1,137 @@
+{
+ "author_abbreviations": 25,
+ "collectors": {
+  "Alade": [
+   2019,
+   2025,
+   "AUH"
+  ],
+  "Harding": [
+   1934,
+   1938,
+   "OKF"
+  ],
+  "Olaniyan": [
+   1961,
+   1967,
+   "SVN"
+  ]
+ },
+ "families": [
+  "Anacardiaceae",
+  "Combretaceae",
+  "Fabaceae",
+  "Irvingiaceae",
+  "Malvaceae",
+  "Meliaceae",
+  "Moraceae",
+  "Sapotaceae"
+ ],
+ "frozen": {
+  "appendices/author_abbreviations.tex": "b7f89c59debe504fb415f9b8ba2c69941ee725a509525cd7936216f58dd0bfe8",
+  "appendices/gazetteer.tex": "59e1add0265cd56fd17448d56fad3726a0fc2aaf84e151a625e94cab8b134972",
+  "bib/florula.bib": "3f23135adc5c0c2b0961209aedd47fcad2249f3823ec14ee816d8bc12c18c6b9",
+  "build/config.json": "d8d163e208001b492827f67b57efff5f18e10b6947e459917fc080de52850a47",
+  "build/submission.yaml": "cc448c73bba471d9bf1cb0ac1dc071d4e6a33b7bde4d77f0303c1752c15fe121",
+  "chapters/introduction.tex": "eb7162e07278c7580f7911f02223ce894285ee7234b8bb6d96b31c747c554c73",
+  "chapters/methods.tex": "de493a543e70060e43756d680604001cb440f2bfdce3a2b64ccee4b918dc307e",
+  "data/archive/specimens_export_2023.tsv": "3e95c5df60608862688810687ab6c75897aaf1ec193433357ffea27091a959cb",
+  "data/localities.tsv": "1f62be6179891f0eb8b15abbb0c37c93deb9ec7fc3723e25e91fcc4feb8aa201",
+  "data/phenology.tsv": "710f37814321fba1273f1f856bdce32c714da1c8beeb2577f165037eae3b8e2c",
+  "data/species.tsv": "2c046495a12f62de75fcebabbf5780d88004839ccb021cf6e935b7acb43e7af9",
+  "families/anacardiaceae.tex": "b00911336030af0bb43511d59fb5792ef28d968a71aad36e746e738ff2a62c91",
+  "families/combretaceae.tex": "515848992b7dec08faf33cb3e2f3eda603377c5af68aae28913498a2454b6040",
+  "families/fabaceae.tex": "4dc49457fc266b921fd533698c19c4772acc6deb85b1173d21e1fa2971bc8efe",
+  "families/irvingiaceae.tex": "7bb7cdb142a601f79940eb85ca7c9c178e5b791b6496ff7475939257931e7c5d",
+  "families/malvaceae.tex": "25b3219812345a84a302145bf6a35dd1d30d27418fea20f1d9a1fdf92b7f219a",
+  "families/moraceae.tex": "1f784d35a2af45ca6d20588098d7f052e50b94172d9be2738ecf396fe1fe51bf",
+  "families/sapotaceae.tex": "e8d7e827d27e20c1a9e7fcae3160b722f97174fc708466cb205e4685bfd1e02c",
+  "florula.sty": "7bfc0c80eea88896f67398298b5e9380cb86049511c4e9e3615462b6609d4c8b",
+  "frontmatter/how_to_use.tex": "1bf4d37f91a05bf9918a3aa91e3fe220bae2f319405e73ae6355f2b501d99e47",
+  "frontmatter/imprint.tex": "a61160ac10745f417b754efeafd5dd22ad3a2045b0ed718004952620ecace25f",
+  "frontmatter/preface.tex": "953d79adbbcc54976055bf2f67012d6b35e905f02cf5b5d7483dc6b573d0e8ac",
+  "frontmatter/titlepage.tex": "1a1ef6050dc4e354ccbe45745f86c6f206033f82dbe44a20ec78c792f553af82",
+  "main.tex": "3c0186b07f97f3f855b1a1048e7184aaab26570fb018d9b22a3db410b17490fe",
+  "notes/house_style_2019.md": "8d4980328389561e7cefedde86bbce23fafb2643967741aad3c10af2af33d577",
+  "notes/open_questions.md": "10f7fac6fc46dfca38713c2f4767d80192d2ddd7d7f2dcc14c11212a9cf421c9"
+ },
+ "inputs": [
+  "frontmatter/titlepage",
+  "frontmatter/imprint",
+  "frontmatter/preface",
+  "frontmatter/how_to_use",
+  "chapters/introduction",
+  "chapters/methods",
+  "keys/key_to_families",
+  "families/anacardiaceae",
+  "families/combretaceae",
+  "families/fabaceae",
+  "families/irvingiaceae",
+  "families/malvaceae",
+  "families/meliaceae",
+  "families/moraceae",
+  "families/sapotaceae",
+  "appendices/author_abbreviations",
+  "appendices/gazetteer",
+  "appendices/phenology_calendar"
+ ],
+ "log_frozen": [
+  "R01",
+  "R02",
+  "R03",
+  "R04",
+  "R05",
+  "R06",
+  "R07",
+  "R08"
+ ],
+ "log_frozen_hashes": [
+  "6f615bccfc6aaf472e81879ae6f7bddcd87817bf90ae33d52fae73193f250f24",
+  "c13dae21e03d61d1f8c568b3b6eb59dc33e9b338c0e53c55dc2ff8e61b1db1d5",
+  "39934ba20660b7b7066f1aa9b3d3613eb0490eeb0156772386a4b53b556cf4a0",
+  "c0e63eab1505427f1063e0752f8e40fc055b93c273cea22b9e5b46e1dc42ae9d",
+  "e6f6edef02d73193dddb18ff17bd10c5ba926c9027ea3f772786eb5586548500",
+  "158177add1d3054366cac2c1a5bde6fad05c6497ba0ebc4fee8bca72187d22f9",
+  "e95d74c173a8fc48056901626fb87345219b521b9a3c884d4b5f7c40d7bd4d66",
+  "917280f30f4b7c921f99ff4a8e32dff0645f84390c29143e846e2a39f638ff03"
+ ],
+ "log_ids": [
+  "R01",
+  "R02",
+  "R03",
+  "R04",
+  "R05",
+  "R06",
+  "R07",
+  "R08",
+  "R09",
+  "R10",
+  "R11",
+  "R12"
+ ],
+ "max_source_files": 35,
+ "n_families": 8,
+ "pages": 44,
+ "references": 15,
+ "shapes": {
+  "localities.tsv": [
+   13,
+   5
+  ],
+  "phenology.tsv": [
+   19,
+   13
+  ],
+  "species.tsv": [
+   19,
+   9
+  ],
+  "specimens.tsv": [
+   127,
+   9
+  ]
+ },
+ "species": 18,
+ "specimens": 126,
+ "specimens_sha256": "45d4707628995454e0f31200db5f8236abf925b08cc2825e07b39c7e05a3ffcd"
+}

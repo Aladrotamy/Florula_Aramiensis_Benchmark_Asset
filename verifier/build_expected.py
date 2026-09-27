@@ -2,12 +2,13 @@
 
 Usage (from the asset root):
     python verifier/build_expected.py golden_solution
+    python verifier/build_expected.py variants/variant_B --out variants/variant_B/expected.json
 
 Every source file of the golden solution is frozen (SHA-256 after line-ending
 normalisation) except the files the task is expected to change: the four
 defect sites and the review log.
 """
-import csv, hashlib, json, os, re, sys
+import argparse, csv, hashlib, json, os, re, sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from verify import sha, read, tsv, strip_comments, ws
@@ -21,7 +22,11 @@ EDITABLE = {
 }
 SOURCE = (".tex", ".bib", ".sty", ".tsv", ".md", ".json", ".yaml")
 
-root = sys.argv[1] if len(sys.argv) > 1 else "golden_solution"
+ap = argparse.ArgumentParser()
+ap.add_argument("root", nargs="?", default="golden_solution")
+ap.add_argument("--out", default=os.path.join(os.path.dirname(os.path.abspath(__file__)), "expected.json"))
+A = ap.parse_args()
+root = A.root
 frozen, count = {}, 0
 for dp, _, fs in os.walk(root):
     for f in sorted(fs):
@@ -61,7 +66,7 @@ exp = {
     "max_source_files": count + 4,
     "frozen": frozen,
 }
-out = os.path.join(os.path.dirname(os.path.abspath(__file__)), "expected.json")
+out = A.out
 with open(out, "w", encoding="utf-8", newline="\n") as f:
     json.dump(exp, f, indent=1, sort_keys=True)
     f.write("\n")
