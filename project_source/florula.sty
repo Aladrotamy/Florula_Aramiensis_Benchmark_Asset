@@ -12,6 +12,7 @@
 \RequirePackage[utf8]{inputenc}
 \RequirePackage{lmodern}
 \RequirePackage{microtype}
+\setlength{\emergencystretch}{1.5em}
 \RequirePackage[a4paper,margin=25mm,headheight=14pt]{geometry}
 \RequirePackage{graphicx}
 \RequirePackage[dvipsnames]{xcolor}
@@ -85,5 +86,21 @@
 \fancyhead[RO]{\small\rightmark}
 \fancyfoot[C]{\small\thepage}
 \renewcommand{\headrulewidth}{0.4pt}
+
+% ---------------------------------------------------------------------
+% 8. Distribution maps on the Flora grid (rows A-D, columns 1-5)
+% ---------------------------------------------------------------------
+% \distmap{C/2, B/1, A/2} shades the listed grid squares.
+\RequirePackage{tikz}
+\def\fl@row@A{3}\def\fl@row@B{2}\def\fl@row@C{1}\def\fl@row@D{0}
+\newcommand{\distmap}[1]{%
+	\begin{tikzpicture}[x=5mm,y=5mm]
+		\foreach \r/\c in {#1}{%
+			\fill[black!45] (\c-1,\csname fl@row@\r\endcsname) rectangle ++(1,1);}
+		\draw[step=1,black!60,thin] (0,0) grid (5,4);
+		\draw[thick] (0,0) rectangle (5,4);
+		\foreach \c in {1,...,5}{\node[font=\tiny,above] at (\c-0.5,4) {\c};}
+		\foreach \r/\y in {A/3,B/2,C/1,D/0}{\node[font=\tiny,left] at (0,\y+0.5) {\r};}
+\end{tikzpicture}}
 
 \endinput

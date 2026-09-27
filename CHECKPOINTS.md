@@ -103,4 +103,43 @@ All checks are pass/fail. A milestone is complete only when every check passes.
 | C3.10 | Table 2.2 matches the data | Harding 32, Olaniyan 32, Alade 26; fl 23, fr 47, st 20 | PASS |
 | C3.11 | Key to Families structure | couplets 1–9 with no gaps; each has a and b; each couplet reached exactly once; all 8 families reachable | PASS (a numbering gap from 4 to 6 was found in draft and fixed) |
 | C3.12 | Source files in `project_source/` (.tex, .bib, .sty, .tsv, .txt) | exactly 16, no drafts | PASS (4 re-created drafts removed) |
-| C3.13 | Text files stored with LF in the repository | 0 CRLF files | Verified after commit |
+| C3.13 | Text files stored with LF in the repository | 0 CRLF files | PASS (0) |
+
+
+
+## M4 — Treatments, Keys & Figures
+
+**Status:** Complete
+**Snapshot:** `milestone_4_treatments/`
+**Compiler:** pdfLaTeX + BibTeX
+
+### Work completed
+- Added 8 family chapters in `families/` (Anacardiaceae, Combretaceae, Fabaceae, Irvingiaceae, Malvaceae, Meliaceae, Moraceae, Sapotaceae) with 18 species treatments.
+- Each treatment gives names, status, synonyms where applicable, description, phenology, habitat, uses with citations, specimens examined, and a distribution map.
+- Added a key to species in each family with more than one species (7 keys).
+- Added the `\distmap` macro (TikZ grid map, rows A–D × columns 1–5) and `\emergencystretch` to `florula.sty`.
+- Added "st." (sterile) to the abbreviations in "How to use this Flora".
+- Specimen citations and map squares were generated from `data/specimens.tsv`; the generator is added to `tools/` in M5.
+
+### Domain decisions recorded
+- Malvaceae is taken in the broad modern sense, including the former Bombacaceae and Sterculiaceae.
+- Burkill (1985) is Volume 1, Families A–D. It is cited only for Anacardiaceae and the former Bombacaceae (*Adansonia*, *Ceiba*).
+- Synonyms and names are given with an authority only when every author abbreviation is listed in Appendix A; otherwise the name is given without authority (*Irvingia wombolu*, *Chlorophora*, *Butyrospermum*).
+
+### Pass/fail checks
+| ID | Check | Threshold | Result |
+|---|---|---|---|
+| C4.1 | Compiles with pdfLaTeX + BibTeX | 0 errors, 0 undefined references or citations, 0 overfull boxes | PASS (0) |
+| C4.2 | Compiled page count | exactly 42 | PASS (42) |
+| C4.3 | Family files in `families/`, each `\input` once in alphabetical order | exactly 8 | PASS |
+| C4.4 | Species treatments (`\species`), each labelled `sp:<species_id>` from `species.tsv` | exactly 18 | PASS |
+| C4.5 | Specimens cited (collector + number) | 90 of 90, each exactly once, in its own species' treatment | PASS |
+| C4.6 | Phenology sentence matches `phenology.tsv` | 18 of 18 | PASS |
+| C4.7 | Status (native or cultivated) matches `species.tsv` | 18 of 18 | PASS |
+| C4.8 | Distribution map squares equal the grid squares of the cited specimens | 18 of 18 maps | PASS |
+| C4.9 | Species keys: couplets numbered without gaps, each has a and b, each species of the family reached exactly once | 7 of 7 keys | PASS |
+| C4.10 | Author abbreviations in treatments not listed in Appendix A | 0 | PASS |
+| C4.11 | Bibliography entries cited at least once | 15 of 15 (closes C2.11) | PASS |
+| C4.12 | Species and specimen counts per family match Table 2.1 | 8 of 8 families | PASS |
+| C4.13 | Source files in `project_source/` (.tex, .bib, .sty, .tsv, .txt) | exactly 24, no drafts | PASS (24) |
+| C4.14 | Text files stored with LF in the repository | 0 CRLF files | Verified after commit |
